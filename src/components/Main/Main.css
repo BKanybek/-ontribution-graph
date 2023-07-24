@@ -1,0 +1,189 @@
+/* Основной блок и контейнеры */
+
+.contribution-graph {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+  }
+  
+  .contribution-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contribution-container {
+    display: flex;
+    position: relative;
+  }
+
+  /* Блоки с неделями */
+
+  .weekday-labels {
+    display: flex;
+    flex-direction: column;
+    margin:20px 10px 0 0; 
+    height: 100%;
+  }
+  
+  .weekday-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    height: 18px; 
+  }
+  
+/* блоки с месяцами  */
+  
+  .month-labels {
+    display: flex;
+  }
+  
+  .month-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      margin: 0 0 5px 0;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+    
+  }
+  
+  /* Графа с информацией о контрибуции */
+
+  .contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(51, 15px); 
+    grid-template-rows: repeat(7, 15px); 
+    grid-gap: 5px; 
+  }
+
+  .week-row{
+    position: relative;
+  }
+
+  .contribution-block {
+    width: 15px; 
+    height: 15px; 
+    margin: 2px;
+    border: 1px solid transparent;
+    position: relative;
+  }
+
+  .contribution-block:hover{
+    border: 1px solid gray;
+  } 
+
+  /* Всплывающее окно основного блока по ячейкам */
+
+  .info-popup {
+    position: absolute;
+    width: 160px;
+    background-color: black;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -70px; 
+    left: -80px; 
+    right: 0;
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .info-popup:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black; 
+  }
+
+  .info-popup p {
+    margin: 5px 0;
+  }
+  .info-popup p:nth-child(2) {
+    font-size: 10px;
+  }
+
+
+  /* Cтили для нижнего информацинного блока где определюятся колличство контрибуций по цветам */
+
+  .contribution-color-info{
+    display: flex;
+    margin: 20px 0 0 0;
+  }
+  .contribution-color-info span{
+    font-size: 12px;
+    margin: 0 10px;
+  }
+  
+  .contribution-color-boxs{
+    display: flex;
+    position: relative;
+  }
+
+  .box{
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    margin: 0 2px;
+    border: 1px solid transparent;
+    position: relative;
+  }
+  .box:hover{
+   border: 1px solid grey;
+  }
+
+/* Всплывающее окно нижнего блока */
+
+.color-info-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    position: absolute;
+    top: -40px; 
+    right: -62px; 
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 1;
+  }
+  .color-info-popup:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black; 
+  }
+  
+  .color-info-popup div {
+    margin-bottom: 5px;
+  }
+  
+  .color-info-popup span {
+    display: block;
+  }
+
+  
+  
